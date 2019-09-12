@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Minister In-Charge</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let i of incharge">
+    <div class="container" style="margin-top: -10px">
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <div class="product-grid">
+            <div class="product-image">
+             <img [src]="url+i.photo" alt="">
+            </div>
+            <div class="product-content">
+              <div class="price">
+                {{i.name}}
+              </div>
+              <h3 class="title">Minister In-Charge</h3>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="price" style="padding: 0px 20px;margin-top: -10px;text-align: justify">
+<!--        {{i.description}}-->
+        <b>Pr. Moncy P. Mathew</b>  was born & brought up in Chittar, Pathanamthitta.
+        After his secular education he joined Grace Bible College, Harayana in the year 1988. He graduated in 1991
+        and for the past 28 years he has been serving the Lord as a Pastor as part of Church Ministry.
+        <br>
+        <br>
+
+        In 1994 he got married to Sr. Lovely Varghese (Shirley). Loise Moncy was his first
+        daughter who went to be with the Lord in the year 2014. Reba Moncy his second daughter
+        and Aaron Moncy are currently pursuing their education.
+
+        <br>
+        <br>
+
+        Pastor Moncy P. Mathew was associated with various churches at the following places:
+        <br>
+        <br>
+        <ol>
+          <li>Mota Nagar, New Delhi</li>
+          <li>Velakulangra, Adoor</li>
+          <li>Nellimukal, Adoor </li>
+          <li>Adoor Town</li>
+          <li>Thrikkanamangal, Kottarakara </li>
+          <li>Nellikkamon, Ranni </li>
+          <li>Abu Dhabi </li>
+          <li>Kozhencherry </li>
+        </ol>
+        Since April 2019, Pastor Moncy P. Mathew is the residential pastor of IPC Full Gospel Church Kuwait.
+      </div>
+  </div>
+</ion-content>

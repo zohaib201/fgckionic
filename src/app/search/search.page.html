@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Member Contact Directory</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <!-- <ion-searchbar showCancelButton cancelButtonText="Custom Cancel" (ionInput)="getItems($event)" ></ion-searchbar>
+  <ion-list *ngIf="showList">
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list> -->
+  <ion-grid style="padding:10px">
+    <ion-row>
+      <ion-label style="margin-bottom: 10px">
+       Search Member
+      </ion-label>
+      <br>
+      <div class="ng-autocomplete">
+        <ng-autocomplete 
+          [data]="data"
+          [searchKeyword]="keyword"
+          (selected)='selectEvent($event)'
+          (inputChanged)='onChangeSearch($event)'
+          (inputFocused)='onFocused($event)'
+          [itemTemplate]="itemTemplate"
+          [notFoundTemplate]="notFoundTemplate"
+          placeHolder="Member Name"> </ng-autocomplete>
+         
+        <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.name"></a>
+        </ng-template>
+         
+        <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+        </ng-template>
+        </div>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

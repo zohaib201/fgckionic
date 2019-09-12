@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="">
+<ion-card *ngFor="let g of getall.slice().reverse()" style="padding: 15px 20px">
+  {{g.title}}
+  <br>
+  {{g.createdAt | date: 'dd-MM-yyyy'}}
+  <br>
+  {{g.description}}
+</ion-card>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Prayer request</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="">
+  <div padding="">
+    <div padding="">
+      <br>
+      <img src="../../assets/img/fgc.jpeg" alt="" height="120" style="display: block;margin: auto">
+      <br>
+      <ion-item>
+        <ion-textarea placeholder="Prayer Request/Message" [(ngModel)]="data.description" style="height: 70px"></ion-textarea>
+      </ion-item>
+      <button class="btn btn-lg btn-primary btn-block fcs" (click)="create()" style="background-color: #026350;margin-top: 50px;border-radius: 50px" type="submit">Post Prayer Request</button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Prayer wall</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="btn btn-primary btn-block fcs" st routerLink="/prayerrequest">
+    Submit a prayer request
+  </div>
+  <div style="    width: 100%; text-align: center; margin-top: 20px;" *ngIf="prayer?.length <= 0">
+    No Current topics
+  </div>
+  <ion-card padding="" *ngFor="let p of prayer.slice().reverse()">
+   <p style="font-size: 16px;"><b>{{p?.memberName}}</b></p>
+
+   <span style="font-size: 16px;">{{p?.description}}</span>
+  </ion-card>
+</ion-content>

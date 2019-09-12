@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar color="primary"  hideBackButton>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+        IPC Full Gospel Church
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+        <div style="padding: 12px 10px">
+            <div class="row" *ngIf="(images?.length <= 0)" padding="">
+                <div class="col-12">
+                    <img src="../../assets/img/gray.png" alt="">
+                </div>
+            </div>
+            <div class="container" *ngFor="let i of images">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <img [src]="url+i.home_img" alt="Image" style="height: 200px;display: block;margin: auto;width:100% !important">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding: 0px 15px">
+            <ion-card class="fcs" routerLink="/search" *ngIf="!guest" style="margin-top: 10px !important;">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="2">
+                            <img src="../../assets/img/search.ico" style="border-radius: 50px;height: 20px;width: 20px" alt="">
+                        </ion-col>
+                        <ion-col size="10" style="font-size: 16px;margin-left: -10px !important;color: black !important;" *ngIf="!guest"><b>Member Directory </b></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+            <ion-card class="fcs" routerLink="/ourtiming" style="margin-top: 10px !important;">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="2">
+                            <img src="../../assets/img/timing.png" style="border-radius: 50px;height: 20px;width: 20px" alt="">
+                        </ion-col>
+                        <ion-col size="10" style="font-size: 16px;margin-left: -10px !important;color: black !important;"><b>Weekly Programs </b></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+
+            <ion-card class="fcs" routerLink="/cellgroup" style="margin-top: 10px !important;">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="2">
+                            <img src="../../assets/img/cellgroups.png" style="border-radius: 50px;height: 20px;width: 20px" alt="">
+                        </ion-col>
+                        <ion-col size="10" style="font-size: 16px;margin-left: -10px !important;color: black !important;"><b>Cell Groups </b></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+
+            <ion-card class="fcs" routerLink="/blog" style="margin-top: 10px !important;">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="2">
+                            <img src="../../assets/img/book.jpg" style="border-radius: 50px;height: 20px;width: 20px" alt="">
+                        </ion-col>
+                        <ion-col size="10" style="font-size: 16px;margin-left: -10px !important;color: black !important;"><b>Pastor's Corner </b></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+            <ion-card class="fcs" routerLink="/contactus" style="margin-top: 10px !important;">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="2">
+                            <img src="../../assets/img/cont.png" style="border-radius: 50px;height: 20px;width: 20px" alt="">
+                        </ion-col>
+                            <ion-col size="10" style="font-size: 16px;margin-left: -10px !important;color: black !important;"><b>Contact Us</b></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+
+                <ion-card class="fcs" style="margin-top: 10px !important;" (click)="open()">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="2">
+                                <img src="../../assets/img/more.png" style="border-radius: 50px;height: 20px;width: 20px" alt="">
+                            </ion-col>
+                            <ion-col size="10" style="font-size: 16px;margin-left: -10px !important;color: black !important;"><b>More</b></ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-card>
+        </div>
+</ion-content>

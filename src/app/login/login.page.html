@@ -1,0 +1,37 @@
+<ion-content class="bc-img">
+  <div class="container" padding="">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <br><br>
+        <img src="../../assets/img/fgck-logo.png" alt="" height="150" style="display: block;margin: auto">
+<!--        <p style="text-align: center;color: white"><b>FGC Connect</b></p>-->
+        <br>
+        <div>
+          <div padding="">
+            <form class="form-signin">
+              <div class="form-label-group cus">
+                <span style="position: absolute;margin-top: 9px;margin-left: 15px">
+                  <ion-icon name="person" style="color:#026350;font-size: 25px"></ion-icon>
+                </span>
+                <input type="text" id="inpu" class="form-control customc" placeholder="Email / Username" [(ngModel)]="data.email" required name="em">
+              </div>
+              <div class="form-label-group cus">
+                <span style="position: absolute;margin-top: 9px;margin-left: 15px">
+                  <ion-icon name="mail" style="color:#026350;font-size: 25px"></ion-icon>
+                </span>
+                <input type="password" id="inputPassword" class="form-control customc" placeholder="Password" [(ngModel)]="data.password"  required  name="pass">
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase fcs" style="background-color: #026350;padding: 13px !important;" type="submit"  (click)="send()">LOGIN</button>
+              <p class="fcs text-center" style="margin-top: 10px;font-size: 16px;color:white;" routerLink="/forgetpass"><b>Forgot Password ?</b></p>
+              <br>
+              <p class="fcs text-center" style="margin-top: -7px !important;margin-bottom: 5px;
+              font-size: 16px;color: black;"><b>Don't have an account ?</b></p>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase fcs" style="background-color: #026350;outline: none;padding: 13px !important;" type="submit"  routerLink="/signup">SIGNUP NOW</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase fcs" style="background-color: #026350;padding: 13px !important;" type="submit"  (click)="guest()">CONTINUE AS GUEST</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

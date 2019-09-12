@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Financial Report</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let a of all" style="padding: 10px">
+    <p><b>Amount: {{a.amount}}</b></p>
+    <p><b>Description: {{a.description}}</b></p>
+    <p><b>Date: {{a.date | date: 'dd/MM/yyyy'}}</b></p>
+  </ion-card>
+</ion-content>

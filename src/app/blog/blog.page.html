@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Pastor's Corner</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!--<div *ngIf="devotional?.length <= 1" id="post">Total post : {{devotional?.length}}</div>-->
+<!--<div *ngIf="devotional?.length >= 1" id="posts">Total posts : {{devotional?.length}}</div>-->
+  <ion-card *ngFor="let blog of devotional" routerLink="/blog-detail/{{blog.id}}">
+      <div class="container">
+        <br>
+        <div class="row">
+          <div class="col-12">
+            <div class="product-grid">
+              <div class="product-image">
+                <img [src]="url+'/'+blog?.imageUrl" alt="">
+              </div>
+              <div class="product-content">
+
+                <h3 class="title" style="margin-top: 10px;text-align: center">{{blog.title}}</h3>
+                <div class="price">
+                  <p style="text-align: center">{{blog.createdAt | date: 'dd-MM-yyyy'}}</p>
+                  <p>{{blog.description.substr(0,200)}}</p>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price" style="padding: 0px 50px">
+<!--        {{i.description}}-->
+      </div>
+<!--    <img [src]="url+'/'+blog?.imageUrl" alt="" style="width: 100%;height:200px">-->
+<!--    <ion-card-content>-->
+<!--      <p>{{blog.createdAt | date: 'dd/MM/yyyy'}}</p>-->
+<!--      <h2><b>{{blog.title}}</b></h2>-->
+<!--      <p>{{blog.description.substr(0,200)}}</p>-->
+<!--    </ion-card-content>-->
+  </ion-card>
+
+
+
+
+  <div style="width: 100%; text-align: center; margin-top: 220px;" *ngIf="devotional?.length <= 0">
+    <h5>Empty</h5>
+  </div>
+</ion-content>

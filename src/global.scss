@@ -1,0 +1,36 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+
+* {
+  font-family: 'Hind', sans-serif;
+}
+
+.searchbar-left-aligned.sc-ion-searchbar-ios-h .searchbar-input.sc-ion-searchbar-ios {
+  background-color: white !important;
+}
+
+.button-inner.sc-ion-back-button-ios {
+  color: white;
+}
+.fcs:focus{
+  outline: 0px !important;
+}
+.fcs{
+  font-size: 13px !important;
+}
+ion-menu{
+  --width: 75% !important;
+}
+.autocomplete-container .suggestions-container ul li a {
+  padding: 6px 15px !important;
+}

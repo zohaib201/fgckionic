@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Calender
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid style="width:90%;">
+    <ionic-calendar-date-picker [monthLabelsStyle]="{ 'font-size': '18px' }"
+      [notInCalendarStyle]="{'color': 'red', 'font-weight': 'bold'}" (onSelect)="dateSelected($event)">
+    </ionic-calendar-date-picker>
+    <div style="margin-top:20px">
+      <div *ngIf="showevent === true">
+        <p style="margin: 0px 0px 0px 15px;"><b>Event available</b></p>
+        <div *ngFor="let a of myevents">
+           <p style="width: 90%;margin: 0px 0px 0px 15px;"><b>{{a.title | titlecase}}</b></p>
+           <p style="width: 90%;margin: 0px 0px 0px 15px;">{{a.description | titlecase}}</p>
+<!--           <p>{{desc | titlecase}}</p>-->
+          <br>
+        </div>
+       </div>
+
+      <p *ngIf="showevent === false" style="margin: 0px 0px 0px 15px;">No event</p>
+    </div>
+  </ion-grid>
+</ion-content>

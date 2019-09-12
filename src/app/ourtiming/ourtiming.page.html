@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Weekly Programs & Timings </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="">
+  <ion-card style="margin: 13px;box-shadow: 2px 2px 25px 1px rgba(214,203,214,1);" *ngFor="let e of Events.slice().reverse()">
+    <ion-card-content>
+      <b>Programme : </b><span>{{e.title}}</span><br>
+      <b>Date : </b><span>{{e.date}}</span><br>
+      <b>Message : </b><span>{{e.description}}</span>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

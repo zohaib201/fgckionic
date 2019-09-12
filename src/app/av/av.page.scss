@@ -1,0 +1,18 @@
+[setting]{
+  display: block;
+  margin: auto;
+  background-color: #026350;
+  //width: 50%;
+  border-radius: 25px !important;
+  font-size: 15px !important;
+  padding: 10px 10px;
+}
+.bc-img{
+  --background: url("../../assets/img/fn.png")0 0/100% 120% no-repeat;
+  background-size: cover !important;
+  //height: 100%;
+  width: 100%;
+  //background-attachment: fixed;
+  background-repeat: no-repeat;
+  //background-position: center center;
+}

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Audio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="">
+  <!--<div *ngIf="videoarr?.length <= 1" id="post">Total Audio : {{videoarr?.length}}</div>-->
+  <!--<div *ngIf="videoarr?.length >= 1" id="posts">Total Audio's : {{videoarr?.length}}</div>-->
+
+  <a *ngFor="let v of videoarr" href="{{v.audioUrl}}">
+    <ion-card>
+      <ion-card-header style="padding: 0px">
+<!--        [src]="url+v?.imageUrl"-->
+        <img src="../../assets/img/audio_thumbnail.png" alt="" style="border-radius: 3px">
+      </ion-card-header>
+<!--      <ion-card-content>-->
+        <p text-center="">{{v?.description.substr(0,20)}}</p>
+<!--      </ion-card-content>-->
+    </ion-card>
+  </a>
+
+  <div style="    width: 100%; text-align: center; margin-top: 220px;" *ngIf="videoarr?.length <= 0">
+    <h5>Empty</h5>
+<!--    <img src="../../assets/img/loader.gif" alt="" height="150">-->
+  </div>
+
+</ion-content>

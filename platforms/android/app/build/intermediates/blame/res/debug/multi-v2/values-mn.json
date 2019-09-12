@@ -1,0 +1,70 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\ionichus\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn\\values-mn.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Zohaib\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.2.6.aar\\d4ea73fb5df58be42267f99c70930acc\\res\\values-mn\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "208",
+                        "endOffsets": "493"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "208",
+                        "endOffsets": "309"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\projects\\FGC_ionic\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn\\values-mn.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Zohaib\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.2.6.aar\\f09c4034715d45c3d1c76172ba18681b\\res\\values-mn\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "208",
+                        "endOffsets": "493"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "208",
+                        "endOffsets": "309"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\projects\\fgckionic\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn\\values-mn.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Zohaib\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.2.6.aar\\f09c4034715d45c3d1c76172ba18681b\\res\\values-mn\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "208",
+                        "endOffsets": "493"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "208",
+                        "endOffsets": "309"
+                    }
+                }
+            ]
+        }
+    ]
+}

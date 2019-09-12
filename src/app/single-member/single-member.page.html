@@ -1,0 +1,148 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{store?.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" style="margin-top: 15px">
+    <div class="row">
+      <div class="col-12">
+        <div class="product-grid">
+          <div class="product-image">
+            <img [src]="url+store?.family_photo" alt="" class="pic-1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div text-center style="margin: 10px 0px 10px 0px">
+    <h4 style="margin-bottom: 10px">{{store?.name}}</h4>
+  </div>
+
+  <div padding="">
+    <div style="margin-left: 5%">
+      <img src="../../assets/img/contact.jpg" style="border-radius: 50px;height: 40px;width: 40px;margin-bottom:8px " alt="">
+      <span style="margin-left: 10px"><b>Contact Numbers</b></span>
+
+      <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 0px" *ngIf="(store?.landline_kuwait !== '')">
+        <b>Phone (KW) : </b>
+        <a href="tel:{{store?.landline_kuwait}}"> {{store?.landline_kuwait}}</a>
+      </p>
+
+      <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 0px" *ngIf="(store?.landline_international !== '')">
+        <b>Phone (INT) : </b>
+        <a href="tel:{{store?.landline_international}}"> {{store?.landline_international}}</a>
+      </p>
+
+      <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 0px" *ngIf="(store?.mobile1_kuwait !== '')">
+        <b>Mobile (KW) : </b>
+        <a href="tel:{{store?.mobile1_kuwait}}"> {{store?.mobile1_kuwait}}</a>
+      </p>
+      <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 0px" *ngIf="(store?.mobile2_kuwait !== '')">
+        <b>Mobile (KW) :</b>
+        <a href="tel:{{store?.mobile2_kuwait}}"> {{store?.mobile2_kuwait}}</a>
+      </p>
+      <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 0px" *ngIf="(store?.mobile1_international !== '')">
+        <b>Mobile (INT) :</b>
+        <a href="tel:{{store?.mobile1_international}}"> {{store?.mobile1_international}}</a>
+      </p>
+      <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 0px" *ngIf="(store?.mobile2_international !== '')">
+        <b>Mobile (INT) : </b>
+        <a href="tel:{{store?.mobile2_international}}"> {{store?.mobile2_international}}</a>
+      </p>
+
+      <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 0px" *ngIf="(store?.primary_whatsapp !== '')">
+        <b>Whatsapp : </b>
+        <a href="tel:{{store?.primary_whatsapp}}"> {{store?.primary_whatsapp}}</a>
+      </p>
+    </div>
+    <div style="padding: 0px 15px 0px 15px">
+      <hr>
+    </div>
+
+    <div style="margin-left: 5%" *ngIf="(store?.email_id1 !== '' || store?.email_id2 !== '')">
+      <img src="../../assets/img/email2.png" style="border-radius: 50px;height: 40px;width: 40px" alt="">
+      <span style="margin-left: 10px"><b>Emails</b></span> 
+      <br>
+
+      <div *ngIf="(store?.email_id1 !== '')">
+<!--        <span><b>Emails</b></span>-->
+        <p style="margin-bottom: 0px;margin-top: 5px">
+          {{store?.email_id1}}
+          <br>
+          {{store?.email_id2}}
+        </p>
+      </div>
+    </div>
+
+    <div style="padding: 0px 15px 0px 15px" *ngIf="(store?.email_id1 !== '' || store?.email_id2 !== '')">
+      <hr>
+    </div>
+
+
+    <div style="margin-left: 5%" *ngIf="(store?.spouse !== '')">
+      <img src="../../assets/img/sp.png" style="border-radius: 40px;height: 40px;width: 40px" alt="">
+      <span style="margin-left: 10px"><b>Spouse</b></span>
+      <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 5px">
+        {{store?.spouse}}
+      </p>
+    </div>
+    
+    <div style="padding: 0px 15px 0px 15px" *ngIf="(store?.spouse !== '')">
+        <hr>
+      </div>
+
+      
+    <div style="margin-left: 5%">
+        <img src="../../assets/img/cellgroups.png" style="border-radius: 40px;height: 40px;width: 40px" alt="">
+        <span style="margin-left: 10px"><b>Cell Group</b></span>
+        <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 5px">
+          {{cell_groupName?.cellGroupDetail}}
+        </p>
+      </div>
+      
+  <div *ngIf="(store?.children.length !== 0)">
+  <div style="padding: 0px 15px 0px 15px">
+    <hr>
+  </div>
+
+  <div style="margin-left: 5%">
+    <img src="../../assets/img/chlild.png" style="border-radius: 50px;height: 40px;width: 40px" alt="">
+    <span style="margin-left: 10px"><b>Children</b></span>
+    <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 5px" *ngFor="let a of store?.children;index as i">
+      {{i+1}} - {{a.name}}
+    </p>
+  </div>
+
+  </div>
+   <div *ngIf="(store?.grand_children.length !== 0)">
+     <div style="padding: 0px 15px 0px 15px">
+       <hr>
+     </div>
+     <div style="margin-left: 5%" *ngIf="store?.grand_children">
+       <img src="../../assets/img/chlild.png" style="border-radius: 50px;height: 40px;width: 40px" alt="">
+       <span style="margin-left: 10px"><b>Grand Children</b></span>
+       <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 5px" *ngFor="let b of store?.grand_children;index as i">
+         {{i+1}} - {{b.name}}
+       </p>
+     </div>
+   </div>
+    <div style="padding: 0px 15px 0px 15px">
+      <hr>
+    </div>
+
+    <div style="margin-left: 5%" *ngIf="(store?.address !== '')">
+      <img src="../../assets/img/address.png" style="border-radius: 50px;height: 40px;width: 40px" alt="">
+      <span style="margin-left: 10px"><b>Address</b></span>
+      <p style="margin-bottom: 0px;margin-left: 3px;margin-top: 5px">
+        {{store?.address}}
+      </p>
+    </div>
+    <br>
+  </div>
+
+</ion-content>

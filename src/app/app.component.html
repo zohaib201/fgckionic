@@ -1,0 +1,173 @@
+<ion-app>
+  <ion-split-pane style="bakground-color:black">
+    <ion-menu [swipeGesture]="false">
+      <div class="container" style="background-color: #d7e7e4">
+        <br>
+        <div class="container" style="border-radius: 3px;padding-left: 2px !important;padding-bottom: 6px !important">
+          <div class="row">
+            <div class="col-4" style="padding-right: 0px !important;">
+              <img src="../assets/img/fgck-logo.png" alt="" height="70" style="display: block;margin: auto" routerLink="/home" class="fcs" (click)="menuclose()">
+            </div>
+            <div class="col-6" style="padding-left: 0px !important;">
+              <p *ngIf="!guest" style="margin-top: 9px;margin-bottom: 15px;font-size: 15px;line-height: 18px"><b> IPC FGCK </b></p>
+              <p *ngIf="guest" style="margin-top: 29px;margin-bottom: 15px;font-size: 15px;line-height: 18px"><b> IPC FGCK </b></p>
+              <div *ngIf="!guest" style="margin-top: -20px !important">
+                <p style="font-size:14px;margin-bottom: 15px !important;"></p>
+
+                <p style="color:#7b7474;line-height: 18px;margin-top: 21px">{{user?.name | titlecase}}</p>
+                <p (click)="logout()" style="font-size: 14px;margin-top: -16px;text-decoration: underline">Logout</p>
+              </div>
+              <div *ngIf="guest" style="margin-top: -8px !important">
+                <br>
+              </div>
+            </div>
+            <div class="col-2">
+              <ion-icon name="close" style="font-size: 30px;margin-top: 20px" (click)="menuclose()">
+              </ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <ion-content padding>
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest"  routerLink="/ourtiming" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/timing.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Weekly Programs</span>
+        </div>
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest" routerLink="/calender" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/clndr.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Event Calendar</span>
+        </div>
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest" routerLink="/prayerwall" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/prayer.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Prayer Wall</span>
+        </div>
+        <div style="margin-left: 9%;margin-bottom: 5px" routerLink="/notification" *ngIf="!guest" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/notification.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Notice Board</span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest"  routerLink="/fgchistory" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/history.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Church History</span>
+        </div>
+
+
+
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest"  routerLink="/incharge" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/incharge.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Minister In-Charge</span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest" routerLink="/members" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/members.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Council Members </span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest" routerLink="/cellgroup" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/cellgroups.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Cell Groups</span>
+        </div>
+
+
+
+
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest" routerLink="/blog" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/book.jpg" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Pastor’s Corner</span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px" routerLink="/search" *ngIf="!guest" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/search.ico" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Member Directory</span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest"  routerLink="/av" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/video.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 6px;font-size: 16px !important;"> Audio & Video Gallery</span>
+        </div>
+
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest" routerLink="/financial" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/financial.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Financial Reports</span>
+        </div>
+
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest"   routerLink="/contactus" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/cont.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Contact Us</span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="!guest" routerLink="/setting" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/setting.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Settings</span>
+        </div>
+
+
+
+        <div style="margin-left: 9%;margin-bottom: 5px" *ngIf="!guest"  class="fcs" (click)="logout()">
+          <img src="../assets/img/logout.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Logout</span>
+        </div>
+
+
+
+
+
+
+
+        <!--here is the guest menu starts from here-->
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="guest"  routerLink="/ourtiming" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/timing.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Weekly Programs</span>
+        </div>
+
+        <div *ngIf="guest"></div>
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="guest" routerLink="/fgchistory" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/history.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Church History</span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px;"  *ngIf="guest" routerLink="/incharge" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/incharge.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Minister Incharge</span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 0px;" *ngIf="guest" routerLink="/members" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/members.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Council Members </span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="guest" routerLink="/cellgroup" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/cellgroups.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Cell Groups</span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px;" *ngIf="guest"  routerLink="/contactus" class="fcs" (click)="menuclose()">
+          <img src="../assets/img/cont.png" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Contact Us</span>
+        </div>
+
+        <div style="margin-left: 9%;margin-bottom: 5px"   class="fcs" *ngIf="guest" (click)="logoutguest()">
+          <img src="../assets/img/search.ico" style="border-radius: 50px;height: 27px;width: 27px;margin-bottom: 7px;" alt="">
+          <span style="margin-left: 10px;font-size: 16px !important;">Logout</span>
+        </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

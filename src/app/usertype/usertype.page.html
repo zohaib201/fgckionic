@@ -1,0 +1,21 @@
+<ion-content padding="" text-center="">
+  <!--<h5><b>Select User Type</b></h5>-->
+<div style="margin-top: 120px">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" routerLink="/login" class="fcs">
+        <ion-icon name="contact" iconst></ion-icon><br>
+        <b style="font-size: 10px;font-weight: bolder">MEMBER LOGIN</b>
+      </ion-col>
+      <ion-col size="12" class="fcs" (click)="guest()" >
+        <ion-icon name="log-in" iconst></ion-icon><br>
+        <b style="font-size: 10px">GUEST LOGIN</b>
+      </ion-col>
+      <ion-col size="12" routerLink="/signup" class="fcs">
+        <ion-icon name="person-add" iconst></ion-icon><br>
+        <b style="font-size: 10px">BECOME A MEMBER</b>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>

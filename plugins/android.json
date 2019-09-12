@@ -1,0 +1,34 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.fgck"
+    },
+    "cordova-plugin-fcm-with-dependecy-updated": {
+      "PACKAGE_NAME": "com.fgck"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.fgck"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.fgck"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.fgck"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.fgck"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.fgck"
+    }
+  },
+  "dependent_plugins": {}
+}
